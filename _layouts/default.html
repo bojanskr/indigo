@@ -17,9 +17,9 @@ layout: compress
     <style>
         {% capture scss_sheet %}
             {% include styles.scss %}
-                {% if site.animate %}
-                    {% include animations.scss %}
-                {% endif %}
+            {% if site.animate %}
+                {% include animations.scss %}
+            {% endif %}
         {% endcapture %}
         {{ scss_sheet | scssify }}
     </style>
