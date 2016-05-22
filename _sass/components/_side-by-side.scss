@@ -1,0 +1,40 @@
+.side-by-side {
+    width: 100%;
+    margin: 4rem 0;
+    > .toleft,
+    > .toright {
+        display: inline-block;
+        width: 47.5%;
+    }
+    @media only screen and (max-width: 780px) {
+        img {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        > .toleft {
+            width: 100%;
+            margin: 0 0 4rem 0;
+        }
+        > .toright {
+            width: 100%;
+            margin: 0 0 4rem 0;
+            > p {
+                margin: 0;
+            }
+        }
+    }
+    @media only screen and (min-width: 780px) {
+        > .toleft {
+            margin-right: 2%;
+        }
+        > .toright {
+            margin-left: 2%;
+            vertical-align: top;
+        }
+    }
+    > .toleft > p,
+    > .toright > p {
+        margin: 0 0 4rem 0;
+    }
+}

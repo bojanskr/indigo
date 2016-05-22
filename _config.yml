@@ -1,28 +1,31 @@
+# your site URL
+url: http://jehartzog.github.io/indigo
+
 # main text of home
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
+name: John Smith
+#bio
+bio: Lorem Ipsum
 
-# if it's an external image, update below for true
-external-image: false
-picture: 'assets/images/profile.jpg'
+# profile picture
+picture: /images/profile.png
 
-url: http://koppl.in/indigo
-# your url: http://USERNAME.github.io
+# animations?
+animate: true
 
-permalink: /:title/
+# your default link style
+permalink: /:categories/:title
 
-markdown: kramdown
-highlighter: rouge
-
-# To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+# To enable google analytics, supply yo-ur token below
+#analytics-google: UA-
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
 # analytics-piwik-id: 1
 
-# if you don't want comments in your posts, set to false
-disqus: mydisqus
+# control disqus settings
+#disqus:
+#  shortname: my disqus # enter this from your disqus account
+#  categories: [blog] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 facebook: myfacebook
@@ -30,42 +33,48 @@ twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-# linkedin: mylinkedin
-youtube: myyoutube
-spotify: myspotify
+linkedin: mylinkedin
+#youtube: myyoutube
+#spotify: myspotify
 github: mygithub
-medium: medium
-vimeo: myvimeo
-email: myemail@gmail.com
+#medium: medium
+email: my@email.com
+
+#seo plugin info
+title: John Smith
+description: Lorem Ipsum
+author: John Smith
+
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
-width: normal
+width: large
 
 # if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
-
-# if you don't need projects, comment the *projects* configs below
-projects: true
+paginate: 5
+paginate_path: blog/:num
 
 # if you don't need "about" or "blog", comment them out below
 about: true
 blog: true
 
 # do you want to show the "read time" of the posts?
-read-time: true
+read-time: false
 
 # do you want to show the "tags" inside the posts?
-show-tags: true
+show-tags: false
 
-# related posts inside a post?
-related: true
+# categories of pages you want related posts to be shown
+related: [blog]
 
-# do you want some animations?
-animation: true
+# configure SASS output style, since inlining anyway should stay compressed
+sass:
+  style: compressed
 
+# versions of these can be found at https://pages.github.com/versions
 gems:
   - jemoji
   - jekyll-mentions
@@ -74,8 +83,18 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-github-metadata
 
 jekyll-mentions:
     base_url: https://github.com
 
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, indigo-gh-pages.zip, Rakefile, screen-shot.png, travis.sh]
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, tasks, package.json, _site, vendor, CNAME, Rakefile, travis.sh]
+
+# perform builds using incremental flag, still experimental so disabled
+# incremental: true
+
+# third party tools that need to be manually updated
+# normalize.css - _sass/base/_normalize.scss
+# compress - _layouts/compress.html
+# disqus - _includes/disqus.html
+# google analytics - _includes/analytics-google.html
