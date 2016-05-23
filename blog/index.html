@@ -6,13 +6,14 @@ title: Blog
 # can't set a permalink with pagination
 ---
 <section class="list">
+	{% assign blogPostIndex = 0 %}
 	{% if site.posts.size == 0 %}
 		<p class="text-center">Nothing published yet!</p>
 	{% elsif site.paginate %}
 		{% for post in paginator.posts %}
 			{% if post.category == 'blog' %}
-				{% capture postIndex %}{% increment loopCounter %}{% endcapture %}
 				{% include blog-post.html %}
+				{% assign blogPostIndex = blogPostIndex | plus: 1 %}
 			{% endif %}
 		{% endfor %}
 
@@ -20,8 +21,8 @@ title: Blog
 	{% else %}
 		{% for post in site.posts %}
 			{% if post.category == 'blog' %}
-				{% capture postIndex %}{% increment loopCounter %}{% endcapture %}
 				{% include blog-post.html %}
+				{% assign blogPostIndex = blogPostIndex | plus: 1 %}
 			{% endif %}
 		{% endfor %}
 	{% endif %}
