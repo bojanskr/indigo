@@ -3,7 +3,7 @@ title: About
 layout: page
 description: "Lorem Ipsum"
 ---
-![Profile Image]({{ site.picture }})
+![Profile Image]({{ site.url }}{{ site.picture }})
 
 <p class="description text-center">{{ page.description }}</p>
 
