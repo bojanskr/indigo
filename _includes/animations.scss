@@ -164,13 +164,13 @@
         }
         .social-links {
             animation-duration: 1s;
-            animation-delay: 6s;
+            animation-delay: 4s;
         }
     }
     .list {
         animation-fill-mode: both;
         animation-name: slideDown;
-        animation-delay: 6s;
+        animation-delay: 4s;
         animation-duration: 1s;
 
         > .item {
@@ -182,25 +182,25 @@
         > .-num-0 {
             > .image,
             > .detail {
-                animation-delay: 3s;
+                animation-delay: 1s;
             }
         }
         > .-num-1 {
             > .image,
             > .detail {
-                animation-delay: 4s;
+                animation-delay: 2s;
             }
         }
         > .-num-2 {
             > .image,
             > .detail {
-                animation-delay: 5s;
+                animation-delay: 3s;
             }
         }
     }
     .nav,
     .footer-main {
-        animation-delay: 6s;
+        animation-delay: 4s;
         animation-duration: 1s;
     }
 }
