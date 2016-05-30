@@ -3,3 +3,4 @@ node_modules
 _site
 .jekyll-metadata
 .sass-cache
+.npm-debug.log
